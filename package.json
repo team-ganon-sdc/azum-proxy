@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/FEC-Group-Link/jon-baltz-proxy#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "newrelic": "^6.5.0"
   }
 }
