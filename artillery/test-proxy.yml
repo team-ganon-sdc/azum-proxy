@@ -1,0 +1,20 @@
+config:
+  target: "http://localhost:3000"
+  processor: "./processor.js"
+  phases:
+    - duration: 60
+      arrivalRate: 1000
+scenarios:
+  - flow:
+    - function: "generateRandomId"
+    - get:
+        url: "/?id={{ id }}"
+    - function: "generateRandomData"
+    - post:
+        url: "/reviews"
+        json:
+          item: "{{ item }}"
+          author: "{{ author }}"
+          body: "{{ body }}"
+          rating: "{{ rating }}"
+          likes: "{{ likes }}"
